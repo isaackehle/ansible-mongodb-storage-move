@@ -12,11 +12,6 @@ Available on Ansible Galaxy: [pgkehle.mongodb-storage-move](https://galaxy.ansib
      - pgkehle.mongodb-storage-move
 ```
 
-This will create a csr in:
-
-- `~/certs/<fqdn>.csr`
-
-
 ## License
 
 MIT
