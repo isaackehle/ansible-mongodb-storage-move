@@ -6,8 +6,6 @@ Available on Ansible Galaxy: [pgkehle.mongodb-storage-move](https://galaxy.ansib
 
 # Examples
 
-## Example to generate a Certificate Signing Request 
-
 ```YAML
  - hosts: all
    roles:
