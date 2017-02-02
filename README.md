@@ -1,6 +1,6 @@
 # Ansible: mongodb-storage-move
 
-Ansible role to move a mongodb to a different directory
+Move a mongodb server storage location to a different directory
 
 Available on Ansible Galaxy: [pgkehle.mongodb-storage-move](https://galaxy.ansible.com/pgkehle/mongodb-storage-move)
 
