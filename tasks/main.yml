@@ -21,6 +21,4 @@
   - name: Start MongoDB Service
     become: true
     service: name=mongod state=started
-
-#    - name: Show MongoDB Service
-#      raw: sudo systemctl status mongod.service
+    register: service_status
