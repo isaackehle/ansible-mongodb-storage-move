@@ -1,7 +1,9 @@
 ---
   - name: Stop MongoDB Service
     become: true
-    service: name=mongod state=stopped
+    service: 
+      name: mongod 
+      state: stopped
 
   - name: Move db data directory
     raw: sudo cp -r {{ db_path }} {{ mnt_loc }}
@@ -14,11 +16,10 @@
 
   - name: link
     raw: sudo ln -s {{ mnt_loc }}/mongodb {{ db_path }}
-
-#    - name: move directly
-#      raw: sudo mv {{ db_path }} {{ mnt_loc }}
-
+    
   - name: Start MongoDB Service
     become: true
-    service: name=mongod state=started
+    service: 
+      name: mongod 
+      state: started
     register: service_status
