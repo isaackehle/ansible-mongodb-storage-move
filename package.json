@@ -1,6 +1,6 @@
 {
   "name": "ansible-mongodb-storage-move",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Move a mongodb server storage location to a different directory",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
