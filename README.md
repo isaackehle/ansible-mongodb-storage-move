@@ -12,6 +12,13 @@ Available on Ansible Galaxy: [pgkehle.mongodb-storage-move](https://galaxy.ansib
      - pgkehle.mongodb-storage-move
 ```
 
+## Linting
+
+```bash
+yamllint -c yamllint.yaml .
+ansible-lint .
+```
+
 ## License
 
 MIT

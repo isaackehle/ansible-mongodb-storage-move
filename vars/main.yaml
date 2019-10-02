@@ -1,5 +1,2 @@
 ---
-
-# vars file for python
-
-    db_path: "/srv/mongodb"
+db_path: "/srv/mongodb"

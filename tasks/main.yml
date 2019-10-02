@@ -1,25 +1,29 @@
 ---
-  - name: Stop MongoDB Service
-    become: true
-    service: 
-      name: mongod 
-      state: stopped
+- name: Stop MongoDB Service
+  become: true
+  service:
+    name: mongod
+    state: stopped
 
-  - name: Move db data directory
-    raw: sudo cp -r {{ db_path }} {{ mnt_loc }}
+- name: Move db data directory
+  command: sudo cp -r {{ db_path }} {{ mnt_loc }}
+  when: true
 
-  - name: backup current
-    raw: sudo mv {{ db_path }} {{ db_path }}.bak
+- name: backup current
+  command: sudo mv {{ db_path }} {{ db_path }}.bak
+  when: true
 
-  - name: change owner
-    raw: sudo chown mongodb.mongodb -R {{ mnt_loc }}/mongodb/
+- name: change owner
+  command: sudo chown mongodb.mongodb -R {{ mnt_loc }}/mongodb/
+  when: true
 
-  - name: link
-    raw: sudo ln -s {{ mnt_loc }}/mongodb {{ db_path }}
-    
-  - name: Start MongoDB Service
-    become: true
-    service: 
-      name: mongod 
-      state: started
-    register: service_status
+- name: link
+  command: sudo ln -s {{ mnt_loc }}/mongodb {{ db_path }}
+  when: true
+
+- name: Start MongoDB Service
+  become: true
+  service:
+    name: mongod
+    state: started
+  register: service_status
